@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMyImage = void 0;
+const express_1 = require("express");
+const validateImageRequest_1 = require("../middleware/validateImageRequest");
+const checkImage_1 = require("../middleware/checkImage");
+const getImage_1 = require("../modules/getImage");
+const GetMyImage = (0, express_1.Router)();
+exports.GetMyImage = GetMyImage;
+GetMyImage.get('/', validateImageRequest_1.validateImageAPI, checkImage_1.checkImage, getImage_1.getImage);
