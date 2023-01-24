@@ -7,7 +7,9 @@
     "build": "npx tsc",
     "start": "nodemon --exec ts-node ./src/.",
     "jasmine": "jasmine",
-    "test": "npm run build && npm run jasmine"
+    "test": "npm run build && npm run jasmine",
+    "prettier": "prettier --config .prettierrc 'src/*.ts' --write",
+    "eslint": "eslint src/**/*.ts"
   },
   "author": "MiDO",
   "license": "ISC",
@@ -19,9 +21,13 @@
   "devDependencies": {
     "@types/express": "^4.17.15",
     "@types/supertest": "^2.0.12",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "jasmine": "^4.5.0",
     "jasmine-spec-reporter": "^7.0.0",
     "nodemon": "^2.0.20",
+    "prettier": "^2.8.3",
     "supertest": "^6.3.3",
     "ts-node": "^10.9.1",
     "@types/jasmine": "^4.3.1",
