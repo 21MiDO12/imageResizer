@@ -1,0 +1,5 @@
+You can use 
+
+http://localhost:1234/GetMyImage?image=lara&&width=250&&height=250
+
+to get your desired image with the desired size
