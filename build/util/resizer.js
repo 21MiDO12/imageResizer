@@ -17,10 +17,7 @@ const sharp_1 = __importDefault(require("sharp"));
 const path_1 = require("path");
 const fs_1 = require("fs");
 const resizer = (path, imageName, width, height) => __awaiter(void 0, void 0, void 0, function* () {
-    if (isNaN(width) && isNaN(height)) {
-        return path;
-    }
-    else if (isNaN(width)) {
+    if (isNaN(width)) {
         try {
             if (!(0, fs_1.existsSync)((0, path_1.resolve)(__dirname + `/../Cache/${imageName}h${height}.jpg`)))
                 yield (0, sharp_1.default)(__dirname + `/../Images/${imageName}.jpg`).resize({ height: height })

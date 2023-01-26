@@ -14,7 +14,7 @@ const path_1 = require("path");
 describe("Testing resizing module", () => {
     try {
         it("Testing passing image without size", () => __awaiter(void 0, void 0, void 0, function* () {
-            expect(yield (0, resizer_1.resizer)((0, path_1.resolve)(__dirname + `/../Images/lara.jpg`), 'lara', NaN, NaN)).toBe((0, path_1.resolve)(__dirname + `/../Images/lara.jpg`));
+            expect(yield (0, resizer_1.resizer)((0, path_1.resolve)(__dirname + `/../Images/lara.jpg`), 'lara', NaN, NaN)).toBeFalsy();
         }));
         it("Testing passing image without height", () => __awaiter(void 0, void 0, void 0, function* () {
             expect(yield (0, resizer_1.resizer)((0, path_1.resolve)(__dirname + `/../Images/lara.jpg`), 'lara', 250, NaN)).toBe((0, path_1.resolve)(__dirname + `/../Cache/laraw250.jpg`));

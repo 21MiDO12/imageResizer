@@ -30,7 +30,7 @@ describe("Testing api", ()=>
     , async () =>
     {
         const res = await req.get('/GetMyImage?image=lara&&width=yourSize&&height=yourSize');
-        expect(res.status).toBe(200);
+        expect(res.status).toBe(402);
     });
     }
     catch(err)

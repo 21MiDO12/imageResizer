@@ -5,11 +5,7 @@ import { existsSync} from "fs";
 
 export const resizer = async (path:string , imageName:string , width: number , height: number) : Promise<string> => 
 {
-    if (isNaN(width) && isNaN(height))
-    {
-        return path;
-    }
-    else if (isNaN(width))
+    if (isNaN(width))
     {
         try
         {

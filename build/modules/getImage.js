@@ -20,6 +20,8 @@ const getImage = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const imgheight = parseInt(req.query.height);
     if (imgwidth == 0 || imgheight == 0)
         return res.status(402).send("Bad Size...");
+    if (isNaN(imgwidth) && isNaN(imgheight))
+        return res.status(402).send("Please Specify Required Size");
     return res.sendFile(yield (0, resizer_1.resizer)((0, path_1.resolve)(__dirname + `/../Images/${req.query.image}.jpg`), req.query.image, imgwidth, imgheight));
 });
 exports.getImage = getImage;

@@ -8,8 +8,7 @@ describe("Testing resizing module", () =>
         it("Testing passing image without size",
         async() =>
         {
-            expect(await resizer(resolve(__dirname + `/../Images/lara.jpg`),'lara',NaN,NaN)).toBe(
-                resolve(__dirname + `/../Images/lara.jpg`));
+            expect(await resizer(resolve(__dirname + `/../Images/lara.jpg`),'lara',NaN,NaN)).toBeFalsy();
         })
 
         it("Testing passing image without height",

@@ -14,6 +14,9 @@ export const getImage = async (req : Request, res : Response) =>
     if (imgwidth == 0 || imgheight == 0)
         return res.status(402).send("Bad Size...");
 
+    if (isNaN(imgwidth) && isNaN(imgheight))
+        return res.status(402).send("Please Specify Required Size");
+        
     return res.sendFile(await resizer(resolve(__dirname + `/../Images/${req.query.image}.jpg`),req.query.image as string
     ,imgwidth,imgheight));
 }
